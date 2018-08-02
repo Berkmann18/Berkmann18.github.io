@@ -40,7 +40,6 @@ $rot: 45deg;
   }
 }
 
-$port-dim: 400px;
 @debug 'dim:' $port-dim;
 //Menu overlay
 .menu {
@@ -106,6 +105,9 @@ $port-dim: 400px;
     text-decoration: none;
     text-transform: uppercase;
     @include easeOut;
+    &:hover {
+      color: $secondary-colour;
+    }
   }
 }
 

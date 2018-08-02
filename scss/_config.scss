@@ -5,6 +5,7 @@ $show-home-image: true;
 $home-image: url('../img/background.jpg');
 $bg-opacity: .9;
 $sz: 100%;
+$port-dim: 400px;
 @mixin easeOut {
   transition: all .5s ease-out;
 }
@@ -25,5 +26,29 @@ $sz: 100%;
         z-index: -1;
       }
     }
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
