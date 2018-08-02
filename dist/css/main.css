@@ -202,6 +202,25 @@ main {
       opacity: .5;
       transition: all .5s ease-out; }
 
+.boxes {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem; }
+  .boxes div {
+    border: 3px solid #fff;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2.5rem;
+    transition: all .5s ease-out; }
+    .boxes div:hover {
+      background-color: #1aceee;
+      color: #fff;
+      padding: .5rem 1.5rem; }
+      .boxes div:hover span {
+        color: #fff; }
+
 .btn, .btn-dark, .btn-light {
   border: 0;
   display: block;

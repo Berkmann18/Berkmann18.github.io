@@ -127,6 +127,29 @@ main {
   }
 }
 
+.boxes {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  div {
+    border: 3px solid $tertiary-colour;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2.5rem;
+    @include easeOut;
+    &:hover {
+      background-color: $secondary-colour;
+      color: $tertiary-colour;
+      padding: .5rem 1.5rem;
+      span {
+        color: $tertiary-colour;
+      }
+    }
+  }
+}
+
 .btn {
   border: 0;
   display: block;
