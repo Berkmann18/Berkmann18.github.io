@@ -104,6 +104,52 @@ main {
   padding: .5rem;
 }
 
+.projects {
+  display: grid;
+  grid-gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  .item {
+    // border: 1px solid red;
+  }
+  img {
+    border: 3px solid $tertiary-colour;
+    // height: auto;
+    // max-height: 100%;
+    // background-size: contain;
+    // object-fit: contain;
+    // object-fit: scale-down;
+    width: 100%;
+    &:hover {
+      border-color: $secondary-colour;
+      opacity: .5;
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  border: 0;
+  display: block;
+  margin-bottom: .3rem;
+  padding: .5rem 1rem;
+  &:hover {
+    background-color: $secondary-colour;
+    color: $tertiary-colour;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background-color: darken($primary-colour, 50);
+  color: $tertiary-colour;
+}
+
+.btn-light {
+  @extend .btn;
+  background-color: lighten($primary-colour, 50);
+  color: $primary-colour;
+}
+
 footer {
   background: darken($primary-colour, 10);
   color: $tertiary-colour;
