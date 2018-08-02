@@ -37,6 +37,10 @@
       width: .6 * $port-dim;
     }
   }
+  .about-info {
+    grid-template-areas: 'bioimg' 'bio' 'job0' 'job1' 'job2';
+    grid-template-columns: 1fr;
+  }
 }
 
 // Phones

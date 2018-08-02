@@ -6,7 +6,8 @@
   "main": "index.html",
   "scripts": {
     "test": "eslint -c ./.eslintrc.js *.js",
-    "css": "node-sass -w scss/ -o dist/css/ --recursive --output-style compressed"
+    "mincss": "node-sass -w scss/ -o dist/css/ --recursive --output-style compressed",
+    "css": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "keywords": [
     "portofolio",

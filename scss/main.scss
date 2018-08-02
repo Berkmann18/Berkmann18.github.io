@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 * {
   box-sizing: border-box;
   /* This would prevent the padding to affect the width and height */
@@ -9,7 +8,7 @@
 body {
   @include bg;
   background-color: $primary-colour;
-  color: $tertiary-colour;
+  color: set-text-colour($primary-colour);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: $sz;
   margin: 0;
@@ -33,7 +32,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: $tertiary-colour;
   text-decoration: none;
 }
 
@@ -48,7 +47,8 @@ header {
 }
 
 main {
-  height: $sz;
+  // height: $sz;
+  min-height: calc(100vh - #{$footer-height});
   padding: 4rem;
   .icons {
     margin-top: 1rem;
@@ -67,3 +67,49 @@ main {
     }
   }
 }
+
+.about-info {
+  display: grid;
+  grid-gap: 1.875rem; // 30/16px
+  grid-template-areas: 'bioimg bio bio' 'job0 job1 job2';
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bio-img {
+  border: $port-border;
+  border-radius: $img-radius;
+  grid-area: bioimg;
+  margin: auto;
+}
+
+.bio {
+  font-size: 1.5rem;
+  grid-area: bio;
+}
+
+
+/* .job-0 {
+  grid-area: job0;
+} */
+
+@for $i from 0 through 2 {
+  .job-#{$i} {
+    grid-area: job#{$i};
+  }
+}
+
+.job {
+  background: lighten($primary-colour, 5);
+  border-bottom: 5px solid $secondary-colour;
+  padding: .5rem;
+}
+
+footer {
+  background: darken($primary-colour, 10);
+  color: $tertiary-colour;
+  height: $footer-height;
+  padding: 1rem;
+  text-align: center;
+}
+
+@import 'mobile';

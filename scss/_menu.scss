@@ -60,7 +60,7 @@ $rot: 45deg;
     height: 100vh;
     justify-content: center;
     overflow: hidden;
-    width: 50%;
+    width: $img-radius;
   }
   &-nav {
     background: darken($color: $primary-colour, $amount: 5);
@@ -81,7 +81,7 @@ $rot: 45deg;
       background-size: cover; //temp?
       background-repeat: no-repeat; //temp
       background-position: center; //temp
-      border: 3px solid $secondary-colour;
+      border: $port-border;
       border-radius: 50%;
       height: $port-dim;
       width: $port-dim;

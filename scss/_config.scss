@@ -6,6 +6,9 @@ $home-image: url('../img/background.jpg');
 $bg-opacity: .9;
 $sz: 100%;
 $port-dim: 400px;
+$img-radius: 50%;
+$port-border: 3px solid $secondary-colour;
+$footer-height: 3.75rem; //60px
 @mixin easeOut {
   transition: all .5s ease-out;
 }
@@ -29,6 +32,19 @@ $port-dim: 400px;
   }
 }
 
+@function set-text-colour ($colour) {
+  /* @if (lightness($colour)>40) {
+    @return #000;
+  }
+  @else {
+    @return #fff;
+  } */
+  $clr: if(lightness($colour) > 40, #000, #fff);
+  @return $clr
+}
+
+$tertiary-colour: set-text-colour($primary-colour);
+@debug 'Colours 1st/2nd/3rd: '+$primary-colour+', '+$secondary-colour+', '+$tertiary-colour;
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;
