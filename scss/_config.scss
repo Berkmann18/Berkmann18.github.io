@@ -1,6 +1,6 @@
 $primary-colour: #333;
 $secondary-colour: #74DBEF;
-$tertiary-colour: #fff;
+$tertiary-colour: #FFF;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
 $bg-opacity: .9;
@@ -33,12 +33,18 @@ $footer-height: 3.75rem; //60px
 }
 
 @function set-text-colour ($colour) {
-  $clr: if(lightness($colour) > 40, #000, #fff);
+  $clr: if(lightness($colour) > 40, #000, #FFF);
   @return $clr
 }
 
 $tertiary-colour: set-text-colour($primary-colour);
-// @debug 'Colours 1st/2nd/3rd: '+$primary-colour+', '+$secondary-colour+', '+$tertiary-colour;
+// Small phones
+@mixin media-xs {
+  @media screen and (max-width: 48px) {
+    @content;
+  }
+}
+
 // Phones
 @mixin media-sm {
   @media screen and (max-width: 600px) {
@@ -72,4 +78,10 @@ $tertiary-colour: set-text-colour($primary-colour);
   @media screen and (min-width: 1171px) {
     @content;
   }
+}
+
+// px -> vw
+@function get-vw($target) {
+  $vw-context: (1000 * .01) * 1px;
+  @return ($target / $vw-context) * 1vw;
 }

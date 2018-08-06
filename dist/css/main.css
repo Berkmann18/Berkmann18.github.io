@@ -6,7 +6,7 @@
   z-index: 3;
   transition: all .5s ease-out; }
   .menu-btn .btn-line {
-    background: #fff;
+    background: #FFF;
     height: 3px;
     margin: 0 0 5px 0;
     width: 28px;
@@ -66,7 +66,7 @@
     .menu .nav-item.current > a {
       color: #74DBEF; }
   .menu .nav-link {
-    color: #fff;
+    color: #FFF;
     diplay: inline-block;
     font-size: 1.875rem;
     font-weight: 300;
@@ -96,7 +96,7 @@
 
 body {
   background-color: #333;
-  color: #fff;
+  color: #FFF;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
   margin: 0;
@@ -131,7 +131,7 @@ h3 {
     padding: .2rem 1rem; }
 
 a {
-  color: #fff;
+  color: #FFF;
   text-decoration: none; }
 
 header {
@@ -160,7 +160,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 1.2rem;
-  grid-template-areas: 'bioimg bio bio' 'jobheading jobheading jobheading' 'job0 job1 job2' 'job3 job4 job5' 'etc etc etc' 'skillheading skillheading skillheading' 'skillcoding skilldesign skillops';
+  grid-template-areas: 'bioimg bio bio' 'jobheading jobheading jobheading' 'job0 job1 job2' 'job3 job4 job5' 'etc etc etc' 'skillheading skillheading skillheading' 'skillcoding skilldesign skillops' 'eduheading eduheading eduheading' 'timeline timeline timeline' 'awardheading awardheading awardheading' 'award0 award1 award2' 'award3 . .';
   grid-template-columns: repeat(3, 1fr); }
 
 .bio-img {
@@ -183,8 +183,14 @@ main {
 .skill-heading {
   grid-area: skillheading; }
 
+.edu-heading {
+  grid-area: eduheading; }
+
+.award-heading {
+  grid-area: awardheading; }
+
 .etc {
-  color: #fff;
+  color: #FFF;
   grid-area: etc; }
 
 .skill-coding {
@@ -204,37 +210,37 @@ main {
 .job-0 {
   grid-area: job0; }
   .job-0:hover {
-    background: #404040 url("../img/work/bwc.gif") no-repeat right center/50%;
+    background: #404040 url("../img/work/bwc.gif") no-repeat right top/25%;
     transition: all .5s ease-out; }
 
 .job-1 {
   grid-area: job1; }
   .job-1:hover {
-    background: #404040 url("../img/work/rhul.png") no-repeat right center/50%;
+    background: #404040 url("../img/work/rhul.png") no-repeat right top/25%;
     transition: all .5s ease-out; }
 
 .job-2 {
   grid-area: job2; }
   .job-2:hover {
-    background: #404040 url("../img/work/progonline.png") no-repeat right center/50%;
+    background: #404040 url("../img/work/progonline.png") no-repeat right top/25%;
     transition: all .5s ease-out; }
 
 .job-3 {
   grid-area: job3; }
   .job-3:hover {
-    background: #404040 url("../img/work/rhul.png") no-repeat right center/50%;
+    background: #404040 url("../img/work/rhul.png") no-repeat right top/25%;
     transition: all .5s ease-out; }
 
 .job-4 {
   grid-area: job4; }
   .job-4:hover {
-    background: #404040 url("../img/work/rh100-teal.png") no-repeat right center/50%;
+    background: #404040 url("../img/work/rh100-teal.png") no-repeat right top/25%;
     transition: all .5s ease-out; }
 
 .job-5 {
   grid-area: job5; }
   .job-5:hover {
-    background: #404040 url("../img/work/currys.png") no-repeat right center/50%;
+    background: #404040 url("../img/work/currys.png") no-repeat right top/25%;
     transition: all .5s ease-out; }
 
 .skill-box {
@@ -260,8 +266,7 @@ main {
   line-height: 2rem;
   padding: .4rem 0 .2rem .4rem;
   width: calc(100% - 2em); }
-  .skill .fa-2x,
-  .skill span[class*="icon"] {
+  .skill .fa-2x {
     vertical-align: middle; }
 
 .html5 {
@@ -411,20 +416,109 @@ main {
   color: black;
   width: 12%; }
 
-/* .svn-logo {
-  color: $tertiary-colour;
-  width: 35rem;
-} */
-/* .fa-bootstrap4 {
-  //Since it doesn't exist in FA but in Font MFizz
-  font-family: NewHouse, Triumvirate, Institute, Frankfurter Com, Helvetica, sans-serif;
-} */
+.timeline {
+  grid-area: timeline;
+  grid-column: 1 / -1;
+  position: relative;
+  margin: 0;
+  /* The actual timeline (the vertical ruler) */
+  /* Container around content */ }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #74DBEF;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; }
+  .timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    /* The circles on the timeline */ }
+    .timeline .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: #74DBEF;
+      border: 4px solid #b3b3b3;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1; }
+
+/* Place the container to the left */
+.left {
+  left: 0;
+  /* Add arrows to the left container (pointing right) */ }
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #404040; }
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */ }
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #404040 transparent transparent; }
+  .right::after {
+    left: -16px; }
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #404040;
+  position: relative;
+  border-radius: 6px; }
+
+.award {
+  align-items: center;
+  background: #404040;
+  border: 5px double #74DBEF;
+  padding: 1rem; }
+  .award img {
+    float: right;
+    width: 20rem; }
+
+.award-0 {
+  grid-area: award0; }
+
+.award-1 {
+  grid-area: award1; }
+
+.award-2 {
+  grid-area: award2; }
+
+.award-3 {
+  grid-area: award3; }
+
 .projects {
   display: grid;
   grid-gap: 1.2rem;
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
-    border: 3px solid #fff;
+    border: 3px solid #FFF;
     width: 100%; }
     .projects img:hover {
       border-color: #74DBEF;
@@ -438,18 +532,18 @@ main {
   justify-content: space-evenly;
   margin-top: 1rem; }
   .boxes div {
-    border: 3px solid #fff;
+    border: 3px solid #FFF;
     font-size: 2rem;
     margin-bottom: 3rem;
     padding: 1.5rem 2.5rem;
     transition: all .5s ease-out; }
     .boxes div:hover {
       background-color: #74DBEF;
-      color: #fff;
+      color: #FFF;
       padding: .25rem 1rem;
       transform: scale(1.5); }
       .boxes div:hover span {
-        color: #fff; }
+        color: #FFF; }
 
 .btn, .btn-dark, .btn-light {
   border: 0;
@@ -458,11 +552,11 @@ main {
   padding: .5rem 1rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background-color: #74DBEF;
-    color: #fff; }
+    color: #FFF; }
 
 .btn-dark {
   background-color: black;
-  color: #fff; }
+  color: #FFF; }
 
 .btn-light {
   background-color: #b3b3b3;
@@ -470,25 +564,26 @@ main {
 
 footer {
   background: #1a1a1a;
-  color: #fff;
+  color: #FFF;
   height: 3.75rem;
   padding: 1rem;
   text-align: center; }
 
 @media screen and (min-width: 1171px) {
+  .about-info,
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 992px) and (max-width: 1170px) {
   .about-info {
-    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops';
-    grid-template-columns: 1fr; }
+    grid-template-areas: 'bioimg boimg' 'bio bio' 'jobheading jobheading' 'job0 job0' 'job1 job1' 'job2 job2' 'job3 job3' 'job4 job4' 'job5 job5' 'etc etc' 'skillheading skillheading' 'skillcoding skilldesign' 'skillcoding skillops' 'eduheading eduheading' 'timeline timeline' 'awardheading awardheading' 'award0 award0' 'award1 award1' 'award2 award2' 'award3 award3';
+    grid-template-columns: repeat(2, 1fr); }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .about-info {
-    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops';
+    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops' 'eduheading' 'timeline' 'awardheading' 'award0' 'award1' 'award2' 'award3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
@@ -520,7 +615,7 @@ footer {
       height: 240px;
       width: 240px; }
   .about-info {
-    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops';
+    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops' 'eduheading' 'timeline' 'awardheading' 'award0' 'award1' 'award2' 'award3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -531,7 +626,52 @@ footer {
     main #home h1 {
       margin-top: 10vh; }
     main .lg-heading {
-      margin-top: 1rem;
-      font-size: 5rem; }
+      font-size: 5rem;
+      margin-top: 1rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .skill .fa-2x {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left; }
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 3.1vw; }
+  /* Full-width containers */
+  .timeline .container {
+    padding-left: 7vw;
+    padding-right: 2.5vw;
+    width: 100%;
+    /* Make sure that all arrows are pointing leftwards */ }
+    .timeline .container::before {
+      border: medium solid #000;
+      border-color: transparent #404040 transparent transparent;
+      border-width: 10px 10px 10px 0;
+      left: 6vw; }
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 2vw; }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%; } }
+
+@media screen and (max-width: 48px) {
+  /* Full-width containers */
+  .timeline .container {
+    padding-left: 7vw;
+    padding-right: 2.5vw;
+    width: 100%;
+    /* Make sure that all arrows are pointing leftwards */ }
+    .timeline .container::before {
+      border: medium solid #000;
+      border-color: transparent #404040 transparent transparent;
+      border-width: 10px 10px 10px 0;
+      left: 6vw; }
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: -5px; }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0; } }

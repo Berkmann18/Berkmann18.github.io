@@ -1,3 +1,4 @@
+/* eslint-env browser */
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
