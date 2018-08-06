@@ -19,6 +19,13 @@
 
 // Desktops & laptops
 @include media-lg {
+  .menu-branding {
+    .portrait {
+      background: url('../img/portrait-small.jpg');
+      height: $small-port;
+      width: $small-port;
+    }
+  }
   .about-info {
     grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops' 'eduheading' 'timeline' 'awardheading' 'award0' 'award1' 'award2' 'award3';
     grid-template-columns: 1fr;
@@ -57,8 +64,8 @@
     transform: translate3d($sz, 0, 0);
     .portrait {
       background: url('../img/portrait-small.jpg');
-      height: 240px;
-      width: 240px;
+      height: $small-port;
+      width: $small-port;
     }
   }
   .about-info {

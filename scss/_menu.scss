@@ -82,7 +82,7 @@ $port-dim;
     transform: translate3d(0, $sz, 0);
     @include ease-out;
     @extend %reset;
-    .potrait {
+    .portrait {
       background: url('../img/portrait.jpg');
       // background-size: cover;
       // background-repeat: no-repeat;

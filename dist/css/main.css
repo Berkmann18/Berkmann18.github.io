@@ -51,7 +51,7 @@
     background: #333;
     transform: translate3d(0, 100%, 0);
     transition: all .5s ease-out; }
-    .menu-branding .potrait {
+    .menu-branding .portrait {
       background: url("../img/portrait.jpg");
       border: 3px solid #74DBEF;
       border-radius: 50%;
@@ -579,6 +579,10 @@ footer {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
+  .menu-branding .portrait {
+    background: url("../img/portrait-small.jpg");
+    height: 240px;
+    width: 240px; }
   .about-info {
     grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops' 'eduheading' 'timeline' 'awardheading' 'award0' 'award1' 'award2' 'award3';
     grid-template-columns: 1fr; }
