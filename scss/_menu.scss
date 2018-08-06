@@ -40,7 +40,13 @@ $rot: 45deg;
   }
 }
 
-@debug 'dim:' $port-dim;
+// @debug 'dim:' $port-dim;
+@debug 'img-rad',
+$img-radius;
+@debug 'sz',
+$sz;
+@debug 'port-dim',
+$port-dim;
 //Menu overlay
 .menu {
   opacity: .93;
@@ -63,7 +69,7 @@ $rot: 45deg;
     width: $img-radius;
   }
   &-nav {
-    background: darken($color: $primary-colour, $amount: 5);
+    background: darken($primary-colour, 5);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -78,9 +84,9 @@ $rot: 45deg;
     @extend %reset;
     .potrait {
       background: url('../img/portrait.jpg');
-      background-size: cover; //temp?
-      background-repeat: no-repeat; //temp
-      background-position: center; //temp
+      // background-size: cover;
+      // background-repeat: no-repeat;
+      // background-position: center;
       border: $port-border;
       border-radius: 50%;
       height: $port-dim;
@@ -97,7 +103,7 @@ $rot: 45deg;
   }
   .nav-link {
     color: $tertiary-colour;
-    diplay: inline-block;
+    display: inline-block;
     font-size: 1.875rem;
     font-weight: 300;
     padding: 1rem 0;

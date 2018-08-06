@@ -56,9 +56,9 @@
     height: 25vh;
     transform: translate3d($sz, 0, 0);
     .portrait {
-      background: url('../img/portrait.jpg');
-      height: .6 * $port-dim;
-      width: .6 * $port-dim;
+      background: url('../img/portrait-small.jpg');
+      height: 240px;
+      width: 240px;
     }
   }
   .about-info {

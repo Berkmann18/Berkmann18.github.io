@@ -59,4 +59,4 @@ const checkPortrait = (sz = '400px', img = 'url("./img/portrait.jpg")') => {
   lo();
 };
 
-fixPortrait();
+// fixPortrait();
