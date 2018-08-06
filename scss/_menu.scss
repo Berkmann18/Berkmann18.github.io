@@ -6,13 +6,13 @@ $rot: 45deg;
   top: $space;
   right: $space;
   z-index: 3;
-  @include easeOut;
+  @include ease-out;
   .btn-line {
     background: $tertiary-colour;
     height: 3px;
     margin: 0 0 5px 0;
     width: 28px;
-    @include easeOut;
+    @include ease-out;
   }
   //Rotate into X
   &.close {
@@ -68,13 +68,13 @@ $rot: 45deg;
     margin: 0;
     padding: 0;
     transform: translate3d(0, -$sz, 0);
-    @include easeOut;
+    @include ease-out;
     @extend %reset;
   }
   &-branding {
     background: $primary-colour;
     transform: translate3d(0, $sz, 0);
-    @include easeOut;
+    @include ease-out;
     @extend %reset;
     .potrait {
       background: url('../img/portrait.jpg');
@@ -89,7 +89,7 @@ $rot: 45deg;
   }
   .nav-item {
     transform: translate3d(600px, 0, 0);
-    @include easeOut;
+    @include ease-out;
     @extend %reset;
     &.current>a {
       color: $secondary-colour;
@@ -104,7 +104,7 @@ $rot: 45deg;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    @include easeOut;
+    @include ease-out;
     &:hover {
       color: $secondary-colour;
     }

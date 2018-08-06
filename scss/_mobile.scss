@@ -1,19 +1,34 @@
 // Widescreens
-@include mediaXl {
+@include media-xxl {
   .projects {
     grid-template-columns: repeat(4, 1fr); //4 * 1 fractionals
   }
 }
 
+// Large creens
+@include media-xl {
+  .about-info {
+    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops';
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: repeat(3, 1fr); //4 * 1 fractionals
+  }
+}
+
 // Desktops & laptops
-@include mediaLg {
+@include media-lg {
+  .about-info {
+    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops';
+    grid-template-columns: 1fr;
+  }
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-// Tablets& small laptops
-@include mediaMd {
+// Tablets & small laptops
+@include media-md {
   main {
     align-items: center;
     text-align: center;
@@ -46,7 +61,7 @@
     }
   }
   .about-info {
-    grid-template-areas: 'bioimg' 'bio' 'job0' 'job1' 'job2';
+    grid-template-areas: 'bioimg' 'bio' 'jobheading' 'job0' 'job1' 'job2' 'job3' 'job4' 'job5' 'etc' 'skillheading' 'skillcoding' 'skilldesign' 'skillops';
     grid-template-columns: 1fr;
   }
   .projects {
@@ -55,7 +70,7 @@
 }
 
 // Phones
-@include mediaSm {
+@include media-sm {
   main {
     padding: 2rem;
     #home h1 {

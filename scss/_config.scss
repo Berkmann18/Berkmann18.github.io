@@ -1,5 +1,5 @@
-$primary-colour: #444;
-$secondary-colour: #1aceee;
+$primary-colour: #333;
+$secondary-colour: #74DBEF;
 $tertiary-colour: #fff;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
@@ -9,7 +9,7 @@ $port-dim: 400px;
 $img-radius: 50%;
 $port-border: 3px solid $secondary-colour;
 $footer-height: 3.75rem; //60px
-@mixin easeOut {
+@mixin ease-out {
   transition: all .5s ease-out;
 }
 
@@ -33,37 +33,42 @@ $footer-height: 3.75rem; //60px
 }
 
 @function set-text-colour ($colour) {
-  /* @if (lightness($colour)>40) {
-    @return #000;
-  }
-  @else {
-    @return #fff;
-  } */
   $clr: if(lightness($colour) > 40, #000, #fff);
   @return $clr
 }
 
 $tertiary-colour: set-text-colour($primary-colour);
-@debug 'Colours 1st/2nd/3rd: '+$primary-colour+', '+$secondary-colour+', '+$tertiary-colour;
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
+// @debug 'Colours 1st/2nd/3rd: '+$primary-colour+', '+$secondary-colour+', '+$tertiary-colour;
+// Phones
+@mixin media-sm {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
 
-@mixin mediaMd {
+// Tablets & small laptops
+@mixin media-md {
   @media screen and (max-width: 768px) {
     @content;
   }
 }
 
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
+// Desktops & laptops
+@mixin media-lg {
+  @media screen and (min-width: 769px) and (max-width: 991px) {
     @content;
   }
 }
 
-@mixin mediaXl {
+// Big screens
+@mixin media-xl {
+  @media screen and (min-width: 992px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+// Wide screens
+@mixin media-xxl {
   @media screen and (min-width: 1171px) {
     @content;
   }

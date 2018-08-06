@@ -56,7 +56,7 @@ main {
       padding: .4rem;
       &:hover {
         color: $secondary-colour;
-        @include easeOut();
+        @include ease-out;
       }
     }
   }
@@ -70,8 +70,8 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 1.875rem; // 30/16px
-  grid-template-areas: 'bioimg bio bio' 'job0 job1 job2';
+  grid-gap: 1.2rem; // 30/16px
+  grid-template-areas: 'bioimg bio bio' 'jobheading jobheading jobheading' 'job0 job1 job2' 'job3 job4 job5' 'etc etc etc' 'skillheading skillheading skillheading' 'skillcoding skilldesign skillops';
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -87,30 +87,307 @@ main {
   grid-area: bio;
 }
 
-
-/* .job-0 {
-  grid-area: job0;
-} */
-
-@for $i from 0 through 2 {
-  .job-#{$i} {
-    grid-area: job#{$i};
-  }
+.section-heading,
+.etc {
+  text-align: center;
 }
 
+.job-heading {
+  grid-area: jobheading;
+}
+
+.skill-heading {
+  grid-area: skillheading;
+}
+
+.etc {
+  color: $tertiary-colour;
+  grid-area: etc;
+}
+
+.skill-coding {
+  grid-area: skillcoding;
+}
+
+.skill-design {
+  grid-area: skilldesign;
+}
+
+.skill-ops {
+  grid-area: skillops;
+}
+
+$job-imgs: '../img/work/bwc.gif',
+'../img/work/rhul.png',
+'../img/work/progonline.png',
+'../img/work/rhul.png',
+'../img/work/rh100-teal.png',
+'../img/work/currys.png';
 .job {
   background: lighten($primary-colour, 5);
   border-bottom: 5px solid $secondary-colour;
   padding: .5rem;
 }
 
+@for $i from 0 through 5 {
+  .job-#{$i} {
+    &:hover {
+      background: lighten($primary-colour, 5) url(nth($job-imgs, $i + 1)) no-repeat right center / 50%;
+      @include ease-out;
+    }
+    grid-area: job#{$i};
+  }
+}
+
+.skill-box {
+  background: lighten($primary-colour, 10);
+  .skill-subheading {
+    border-bottom: 3px solid $secondary-colour;
+    text-align: center;
+    // vertical-align: top;
+    padding-bottom: .1rem;
+  }
+}
+
+.skill-range {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: .5rem;
+  margin-left: .1rem;
+  span {
+    border-bottom: 1px solid $secondary-colour;
+  }
+}
+
+$skill-bar-height: 2rem;
+$skill-bar-clr: lighten($primary-colour,
+15);
+.skill {
+  background-color: $skill-bar-clr;
+  // border-radius: 0 100% 100% 0;
+  // float: left;
+  display: block;
+  line-height: $skill-bar-height;
+  padding: .4rem 0 .2rem .4rem;
+  width: calc(100% - 2em); //fa-2x := 2em
+  .fa-2x,
+  span[class*="icon"] {
+    vertical-align: middle;
+  }
+}
+
+//Middle points of levels
+$dist-beg: 12%; //4rem;
+$dist-elem: 31%; //11rem;
+$dist-inter: 50%; //18rem;
+$dist-adv: 72%; //25.5rem;
+$dist-exp: 90%; //31.4rem;
+.html5 {
+  background-color: #f16528;
+  width: 84%;
+}
+
+.css3 {
+  background-color: #339cd5;
+  width: 62%;
+}
+
+.scss {
+  background-color: #cd669a;
+  width: $dist-inter * 1.09;
+}
+
+.bootstrap {
+  background-color: #563d7c;
+  width: $dist-inter * 1.15;
+}
+
+.js {
+  background-color: #fbde34;
+  width: 86%;
+}
+
+.nodejs {
+  background-color: #83cd29;
+  width: $dist-adv * .9;
+}
+
+.express {
+  background-color: #888;
+  width: $dist-adv * .87;
+}
+
+.jquery {
+  background-color: #000;
+  width: 45%;
+}
+
+.vuejs {
+  background-color: #41b883;
+  width: $dist-beg * 1.09;
+}
+
+.react {
+  background-color: #00d8ff;
+  width: $dist-beg / 2;
+}
+
+.pug {
+  background-color: #efcca3;
+  width: $dist-adv;
+}
+
+.python {
+  background-color: #37709f;
+  width: 57%;
+}
+
+.java {
+  background-color: #e76f00;
+  width: $dist-inter;
+}
+
+.php {
+  background-color: #8993be;
+  width: $dist-elem * .8;
+}
+
+.sql {
+  background-color: #007a7a;
+  width: $dist-adv * .8;
+}
+
+.mongodb {
+  background-color: #3ea847;
+  width: $dist-elem * 1.3;
+}
+
+.c {
+  background-color: #a8b9cc;
+  width: $dist-inter * .9;
+}
+
+.csharp {
+  background-color: #39008d;
+  width: $dist-beg;
+}
+
+.unity {
+  background-color: #000;
+  width: $dist-beg * .9;
+}
+
+.bash {
+  background-color: #3e474a;
+  width: 84%;
+}
+
+.xml {
+  // background-color: #;
+  width: $dist-inter * 1.1;
+}
+
+.asm {
+  background-color: #0071c5;
+  width: $dist-beg;
+}
+
+.mips {
+  //background-color: #;
+  width: $dist-beg;
+}
+
+.markdown {
+  background-color: #000;
+  width: $dist-adv;
+}
+
+.processing {
+  background-color: #01192c;
+  width: $dist-adv * .8;
+}
+
+.matlab {
+  background-color: #ffaf0a;
+  width: $dist-inter;
+}
+
+.gimp {
+  background-color: #585141;
+  width: $dist-elem * 1.45;
+}
+
+.pfsx {
+  background-color: #676767;
+  width: $dist-adv * .88;
+}
+
+.ps {
+  background-color: #00c7fe;
+  width: $dist-beg;
+}
+
+.ai {
+  background-color: #ff7c00;
+  width: $dist-beg;
+}
+
+.inkscape {
+  background-color: #000;
+  width: $dist-beg * .8;
+}
+
+.git {
+  background-color: #f05033;
+  width: $dist-inter * 1.05;
+}
+
+.svn {
+  background-color: #809cc8;
+  width: $dist-beg * 1.5;
+}
+
+.heroku {
+  background-color: #7d57c1;
+  width: $dist-inter;
+}
+
+.linux {
+  background-color: #fed21f;
+  width: $dist-adv * 1.05;
+}
+
+.windows {
+  background-color: #03a9f4;
+  width: $dist-adv;
+}
+
+.osx {
+  background-color: #f0f6f4;
+  color: #fff - $tertiary-colour;
+  width: $dist-beg;
+}
+
+//Linux:A, Win:A, OSX:B
+//EN:F, FR:F, ES:B
+
+/* .svn-logo {
+  color: $tertiary-colour;
+  width: 35rem;
+} */
+
+
+/* .fa-bootstrap4 {
+  //Since it doesn't exist in FA but in Font MFizz
+  font-family: NewHouse, Triumvirate, Institute, Frankfurter Com, Helvetica, sans-serif;
+} */
+
 .projects {
   display: grid;
   grid-gap: 1.2rem;
   grid-template-columns: repeat(3, 1fr);
-  .item {
-    // border: 1px solid red;
-  }
   img {
     border: 3px solid $tertiary-colour;
     // height: auto;
@@ -122,7 +399,7 @@ main {
     &:hover {
       border-color: $secondary-colour;
       opacity: .5;
-      @include easeOut;
+      @include ease-out;
     }
   }
 }
@@ -138,11 +415,12 @@ main {
     font-size: 2rem;
     margin-bottom: 3rem;
     padding: 1.5rem 2.5rem;
-    @include easeOut;
+    @include ease-out;
     &:hover {
       background-color: $secondary-colour;
       color: $tertiary-colour;
-      padding: .5rem 1.5rem;
+      padding: .25rem 1rem;
+      transform: scale(1.5);
       span {
         color: $tertiary-colour;
       }
