@@ -75,17 +75,15 @@ const loadScript = (url, callback) => {
 };
 
 window.onload = () => {
-  loadScript('js/accessibility.min.js', () => {
+  loadScript('js/vendor/accessibility.min.js', () => {
     new Accessibility();
   });
   if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') { // Dev
-    loadScript('js/axe.min.js', () => {
+    loadScript('js/vendor/axe.min.js', () => {
       axe.run((err, results) => {
         if (err) throw err;
-        // ok(results.violations.length === 0, 'Should be no accessibility issues');
         if (results.violations.length === 0) console.info('No accessibility issues!');
         else results.violations.forEach(console.warn);
-        // complete the async call
       });
     });
   }
