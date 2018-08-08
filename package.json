@@ -9,7 +9,6 @@
     "test": "eslint -c ./.eslintrc.js *.js",
     "mincss": "node-sass -w scss/ -o dist/css/ --recursive --output-style compressed",
     "css": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "portofolio",
@@ -24,7 +23,6 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "gh-pages": "^1.2.0",
     "node-sass": "^4.9.2"
   }
 }
