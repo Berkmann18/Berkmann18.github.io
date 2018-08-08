@@ -6,23 +6,31 @@
   "main": "index.html",
   "homepage": "https://berkmann18.github.io/MyPortfolio",
   "scripts": {
-    "test": "eslint -c ./.eslintrc.js *.js",
+    "test": "eslint -c ./.eslintrc.json *.js",
     "mincss": "node-sass -w scss/ -o dist/css/ --recursive --output-style compressed",
     "css": "node-sass -w scss/ -o dist/css/ --recursive",
+    "dev": "cd dist && http-server dist -r 'User-agent: *\nDisallow:'",
+    "prod": "ngrok http 8080"
   },
   "keywords": [
     "portofolio",
     "website",
     "html5",
     "css3",
-    "scss"
+    "scss",
+    "js"
   ],
   "author": "Maximilian Berkmann <maxieberkmann@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "axe-core": "^3.0.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "http-server": "^0.11.1",
     "node-sass": "^4.9.2"
+  },
+  "dependencies": {
+    "accessibility": "^1.0.0"
   }
 }

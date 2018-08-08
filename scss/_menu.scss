@@ -97,7 +97,8 @@ $port-dim;
     transform: translate3d(600px, 0, 0);
     @include ease-out;
     @extend %reset;
-    &.current>a {
+    &.current>a,
+    &:focus {
       color: $secondary-colour;
     }
   }
@@ -111,7 +112,8 @@ $port-dim;
     text-decoration: none;
     text-transform: uppercase;
     @include ease-out;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $secondary-colour;
     }
   }

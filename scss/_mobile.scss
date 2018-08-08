@@ -1,12 +1,15 @@
 // Widescreens
-@include media-xxl {
+@include media-vl {
   .about-info,
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+  .about-info {
+    grid-template-areas: 'bioimg bio bio bio' 'jobheading jobheading jobheading jobheading' 'job0 job0 job1 job2' 'job3 job4 job5 job2' 'etc etc etc etc' 'skillheading skillheading skillheading skillheading' 'skillcoding skillcoding skilldesign skillops' 'eduheading eduheading eduheading eduheading' 'timeline timeline timeline timeline' 'awardheading awardheading awardheading awardheading' 'award0 award1 award2 award3';
+  }
 }
 
-// Large creens
+// Large screens
 @include media-xl {
   .about-info {
     grid-template-areas: 'bioimg boimg' 'bio bio' 'jobheading jobheading' 'job0 job0' 'job1 job1' 'job2 job2' 'job3 job3' 'job4 job4' 'job5 job5' 'etc etc' 'skillheading skillheading' 'skillcoding skilldesign' 'skillcoding skillops' 'eduheading eduheading' 'timeline timeline' 'awardheading awardheading' 'award0 award0' 'award1 award1' 'award2 award2' 'award3 award3';

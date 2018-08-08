@@ -76,7 +76,14 @@ $tertiary-colour: set-text-colour($primary-colour);
 
 // Wide screens
 @mixin media-xxl {
-  @media screen and (min-width: 1171px) {
+  @media screen and (min-width: 1171px) and (max-width: 1460px) {
+    @content;
+  }
+}
+
+// Huge screens
+@mixin media-vl {
+  @media screen and (min-width: 1461px) {
     @content;
   }
 }

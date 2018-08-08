@@ -11,8 +11,8 @@
   </head>
 
   <body id="bg-img">
-    <header>
-      <div class="menu-btn">
+    <header role="banner">
+      <div class="menu-btn" tabindex="0">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -22,23 +22,23 @@
         <div class="menu-branding">
           <div class="portrait"></div>
         </div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
+        <ul class="menu-nav" role="menubar">
+          <li class="nav-item current" role="menuitem">
             <a href="index.html" class="nav-link">
               Home
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" role="menuitem">
             <a href="about.html" class="nav-link">
               About Me
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" role="menuitem">
             <a href="work.html" class="nav-link">
               My Work
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" role="menuitem">
             <a href="contact.html" class="nav-link">
               Contact Me
             </a>
@@ -47,7 +47,7 @@
       </nav>
     </header>
 
-    <main id="home">
+    <main id="home" role="main">
       <h1 class="lg-heading">
         Maximilian
         <span class="text-secondary">Berkmann</span>
@@ -57,55 +57,55 @@
       </h2>
       <div class="icons">
         <!-- Social media -->
-        <a href="https://twitter.com/berkmann18">
-          <i class="fab fa-twitter fa-2x"></i>
+        <a href="https://twitter.com/berkmann18" tabindex="2">
+          <i class="fab fa-twitter fa-2x" title="Twitter"></i>
         </a>
-        <a href="https://www.facebook.com/maxkberkmann">
-          <i class="fab fa-facebook fa-2x"></i>
+        <a href="https://www.facebook.com/maxkberkmann" tabindex="3">
+          <i class="fab fa-facebook fa-2x" title="Facebook"></i>
         </a>
-        <a href="https://www.linkedin.com/in/mberkmann/">
-          <i class="fab fa-linkedin fa-2x"></i>
+        <a href="https://www.linkedin.com/in/mberkmann/ " tabindex="4">
+          <i class="fab fa-linkedin fa-2x" title="LinkedIn"></i>
         </a>
-        <a href="https://dev.to/berkmann18">
-          <i class="fab fa-dev fa-2x"><small>DEV</small></i>
+        <a href="https://dev.to/berkmann18" tabindex="5">
+          <i class="fab fa-dev fa-2x" title="Dev.to"><small>DEV</small></i>
         </a>
-        <a href="https://plus.google.com/+MaximilianBerkmann">
-          <i class="fab fa-google-plus-g fa-2x"></i>
+        <a href="https://plus.google.com/+MaximilianBerkmann" tabindex="6">
+          <i class="fab fa-google-plus-g fa-2x" title="Google+ "></i>
         </a>
-        <a href="https://www.instagram.com/berkmann18/">
-          <i class="fab fa-instagram fa-2x"></i>
+        <a href="https://www.instagram.com/berkmann18/ " tabindex="7">
+          <i class="fab fa-instagram fa-2x" title="Instagram"></i>
         </a>
-        <a href="https://www.pinterest.co.uk/maxieberkmann/">
-          <i class="fab fa-pinterest fa-2x"></i>
+        <a href="https://www.pinterest.co.uk/maxieberkmann/ " tabindex="8">
+          <i class="fab fa-pinterest fa-2x" title="Pinterest"></i>
         </a>
-        <a href="https://hashnode.com/@berkmann18">
-          <i class="fab fa-bolt fa-2x"></i>
+        <a href="https://hashnode.com/@berkmann18" tabindex="9">
+          <i class="fas fa-bolt fa-2x" title="Hashnode"></i>
         </a>
-        <a href="https://www.quora.com/profile/Maximilian-Berkmann">
-          <i class="fab fa-quora fa-2x"></i>
+        <a href="https://www.quora.com/profile/Maximilian-Berkmann" tabindex="10">
+          <i class="fab fa-quora fa-2x" title="Quora"></i>
         </a>
-        <a href="https://medium.com/@B.Max">
-          <i class="fab fa-medium fa-2x"></i>
+        <a href="https://medium.com/@B.Max" tabindex="11">
+          <i class="fab fa-medium fa-2x" title="Medium"></i>
         </a>
         <br>
-        <a href="https://github.com/Berkmann18">
-          <i class="fab fa-github fa-2x"></i>
+        <a href="https://github.com/Berkmann18" tabindex="12">
+          <i class="fab fa-github fa-2x" title="Github"></i>
         </a>
-        <a href="https://gitlab.com/Berkmann18">
-          <i class="fab fa-gitlab fa-2x"></i>
+        <a href="https://gitlab.com/Berkmann18" tabindex="13">
+          <i class="fab fa-gitlab fa-2x" title="Gitlab"></i>
         </a>
-        <a href="https://bitbucket.org/Berkmann18/">
-          <i class="fab fa-bitbucket fa-2x"></i>
+        <a href="https://bitbucket.org/Berkmann18/ " tabindex="14">
+          <i class="fab fa-bitbucket fa-2x" title="Bitbucket"></i>
         </a>
-        <a href="https://keybase.io/berkmann18">
-          <i class="fab fa-keybase fa-2x"></i>
+        <a href="https://keybase.io/berkmann18" tabindex="15">
+          <i class="fab fa-keybase fa-2x" title="Keybase"></i>
         </a>
         <!-- skype: b.max-18 -->
-        <!-- TODO: add medium link and more for all the write-ups and articles I wrote -->
 
       </div>
     </main>
 
+    <script type="text/javascript" src="js/accessibility.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 

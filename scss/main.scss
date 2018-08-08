@@ -54,7 +54,8 @@ main {
     margin-top: 1rem;
     a {
       padding: .4rem;
-      &:hover {
+      &:hover,
+      &:focus {
         color: $secondary-colour;
         @include ease-out;
       }
@@ -163,7 +164,7 @@ $box-colour: lighten($primary-colour, 5);
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around; //space-evenly isn't fully supported so this
   margin-bottom: .5rem;
   margin-left: .1rem;
   span {
@@ -289,12 +290,12 @@ $dist-exp: 90%; //31.4rem;
 }
 
 .bash {
-  background-color: #3e474a;
+  background-color: #102913; //#3e474a;
   width: 84%;
 }
 
 .xml {
-  // background-color: #;
+  background-color: #f60;
   width: $dist-inter * 1.1;
 }
 
@@ -304,7 +305,7 @@ $dist-exp: 90%; //31.4rem;
 }
 
 .mips {
-  //background-color: #;
+  background-color: #2055a5;
   width: $dist-beg;
 }
 
@@ -324,7 +325,7 @@ $dist-exp: 90%; //31.4rem;
 }
 
 .gimp {
-  background-color: #585141;
+  background-color: #706853; //#585141 
   width: $dist-elem * 1.45;
 }
 
@@ -376,6 +377,11 @@ $dist-exp: 90%; //31.4rem;
 .osx {
   background-color: #f0f6f4;
   color: #fff - $tertiary-colour;
+  width: $dist-beg;
+}
+
+.webpack {
+  background-color: #b3c9ee;
   width: $dist-beg;
 }
 
@@ -513,7 +519,7 @@ $dist-exp: 90%; //31.4rem;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around; //space-evenly isn't fully supported yet
   margin-top: 1rem;
   div {
     border: 3px solid $tertiary-colour;
@@ -565,3 +571,4 @@ footer {
 }
 
 @import 'mobile';
+@import 'access';
