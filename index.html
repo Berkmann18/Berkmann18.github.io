@@ -12,17 +12,17 @@
 
   <body id="bg-img">
     <header role="banner">
-      <div class="menu-btn" tabindex="0">
+      <div class="menu-btn" tabindex="0" aria-haspopup="true" aria-label="Menu button">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
       </div>
 
-      <nav class="menu">
+      <nav class="menu" role="navigation" aria-label="Half screen menu">
         <div class="menu-branding">
           <div class="portrait"></div>
         </div>
-        <ul class="menu-nav" role="menubar">
+        <ul class="menu-nav" role="menubar" aria-hidden="true" aria-label="submenu">
           <li class="nav-item current" role="menuitem">
             <a href="index.html" class="nav-link">
               Home
@@ -105,7 +105,6 @@
       </div>
     </main>
 
-    <script type="text/javascript" src="js/accessibility.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 
