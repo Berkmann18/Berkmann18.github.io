@@ -9,9 +9,9 @@
     "test": "eslint -c ./.eslintrc.json *.js",
     "mincss": "node-sass -w scss/ -o dist/css/ --recursive --output-style compressed",
     "css": "node-sass -w scss/ -o dist/css/ --recursive",
-    "dev": "cd dist && http-server dist -r 'User-agent: *\nDisallow:'",
+    "dev": "http-server dist",
     "prod": "ngrok http 8080",
-    "deploy": "node scripts/deploy"
+    "deploy": "gh-pages -d dist/ -b master"
   },
   "keywords": [
     "portofolio",
@@ -25,7 +25,7 @@
   "license": "MIT",
   "devDependencies": {
     "axe-core": "^3.0.3",
-    "eslint": "^4.19.1",
+    "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "gh-pages": "^1.2.0",
