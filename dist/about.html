@@ -12,34 +12,34 @@
   </head>
 
   <body>
-    <header>
-      <div class="menu-btn">
+    <header role="banner">
+      <div class="menu-btn" tabindex="0" aria-haspopup="true" aria-label="Menu button">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
       </div>
 
-      <nav class="menu">
+      <nav class="menu" role="navigation" aria-label="Half screen menu">
         <div class="menu-branding">
           <div class="portrait"></div>
         </div>
-        <ul class="menu-nav">
-          <li class="nav-item">
+        <ul class="menu-nav" role="menubar" aria-hidden="true" aria-label="submenu">
+          <li class="nav-item" role="menuitem">
             <a href="index.html" class="nav-link">
               Home
             </a>
           </li>
-          <li class="nav-item current">
+          <li class="nav-item current" role="menuitem">
             <a href="about.html" class="nav-link">
               About Me
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" role="menuitem">
             <a href="work.html" class="nav-link">
               My Work
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" role="menuitem">
             <a href="contact.html" class="nav-link">
               Contact Me
             </a>
@@ -48,7 +48,7 @@
       </nav>
     </header>
 
-    <main id="about">
+    <main id="about" role="main">
       <h1 class="lg-heading">
         About
         <span class="text-secondary">Me</span>

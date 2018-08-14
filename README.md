@@ -1,4 +1,4 @@
-# MyPortfolio
+# Berkmann18.github.io
 [![BCH compliance](https://bettercodehub.com/edge/badge/Berkmann18/MyPortofolio?branch=master)](https://bettercodehub.com/results/Berkmann18/MyPortofolio)
 [![AirBNB](https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg?style=flat-square)](https://github.com/airbnb/javascript)
 [![David](https://img.shields.io/david/Berkmann18/MyPortfolio.svg?style=flat-square)](https://david-dm.org/Berkmann18/MyPortofolio)

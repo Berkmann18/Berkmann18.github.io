@@ -4,7 +4,6 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
-const iconList = Array.from(document.querySelectorAll('a[tabindex]'));
 
 // Set initial state of menu
 const state = {
@@ -13,7 +12,8 @@ const state = {
 };
 
 const toggleMenu = () => {
-  const lastTabIndex = iconList[iconList.length - 1].tabIndex;
+  // const iconList = Array.from(document.querySelectorAll('a[tabindex]'));
+  // const lastTabIndex = iconList[iconList.length - 1].tabIndex;
   if (!state.showMenu) {
     menuBtn.classList.add('close');
     menu.classList.add('show');
@@ -22,11 +22,11 @@ const toggleMenu = () => {
     navItems.forEach(item => item.classList.add('show'));
 
     // Reset the tab indexes
-    navItems.forEach((item, idx) => {
+    /* navItems.forEach((item, idx) => {
       iconList[idx].tabIndex = 2 + idx;
       // eslint-disable-next-line no-param-reassign
       item.tabIndex = 1 + lastTabIndex + idx;
-    });
+    }); */
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
@@ -35,20 +35,18 @@ const toggleMenu = () => {
     navItems.forEach(item => item.classList.remove('show'));
 
     // Set the tab index of the nav items
-    navItems.forEach((item, idx) => {
+    /* navItems.forEach((item, idx) => {
       // Change the first n FA icons' tab indexes to be at the end
       iconList[idx].tabIndex = 1 + lastTabIndex + idx;
       // eslint-disable-next-line no-param-reassign
       item.tabIndex = 1 + menuBtn.tabIndex + idx;
-    });
+    }); */
   }
   state.showMenu = !state.showMenu;
-  // switchTabIndexes();
 };
 
 menuBtn.addEventListener('click', toggleMenu);
 menuBtn.addEventListener('focus', () => {
-  // console.log(evt);
   state.onMenu = true;
 });
 menu.addEventListener('blur', () => {
