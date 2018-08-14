@@ -77,11 +77,18 @@ const loadScript = (url, callback) => {
 
 window.onload = () => {
   loadScript('js/vendor/accessibility.min.js', () => {
+    /* eslint-disable */
     new Accessibility();
+    /* eslint-enable */
   });
-  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') { // Dev
+  /* eslint-disable */
+  const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  /* eslint-enable */
+  if (isLocal) { // Dev
     loadScript('js/vendor/axe.min.js', () => {
+      /* eslint-disable */
       axe.run((err, results) => {
+        /* eslint-enable */
         if (err) throw err;
         if (results.violations.length === 0) console.info('No accessibility issues!');
         else results.violations.forEach(console.warn);
