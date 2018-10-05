@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Icomoon';
+  src: url('../fonts/icomoon.eot') format('eot'),
+       url('../fonts/icomoon.woff') format('woff'),
+       url('../fonts/icomoon.ttf') format('truetype');
+}
+
+.icon-webpack:before, .icon-inkscape:before, .icon-illustrator:before, .icon-photoshop:before, .icon-xml:before, .icon-svn:before {
+  font-family: 'Icomoon';
+}
+
+.icon-webpack:before {
+  content: "\e900";
+}
+
+.icon-inkscape:before {
+  content: "\e901";
+}
+
+.icon-illustrator:before {
+  content: "\e902";
+}
+
+.icon-photoshop:before {
+  content: "\e903";
+}
+
+.icon-xml:before {
+  content: "\e904";
+}
+
+.icon-svn:before {
+  content: "\e906";
+}
