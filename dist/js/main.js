@@ -12,35 +12,18 @@ const state = {
 };
 
 const toggleMenu = () => {
-  // const iconList = Array.from(document.querySelectorAll('a[tabindex]'));
-  // const lastTabIndex = iconList[iconList.length - 1].tabIndex;
   if (!state.showMenu) {
     menuBtn.classList.add('close');
     menu.classList.add('show');
     menuNav.classList.add('show');
     menuBranding.classList.add('show');
     navItems.forEach(item => item.classList.add('show'));
-
-    // Reset the tab indexes
-    /* navItems.forEach((item, idx) => {
-      iconList[idx].tabIndex = 2 + idx;
-      // eslint-disable-next-line no-param-reassign
-      item.tabIndex = 1 + lastTabIndex + idx;
-    }); */
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
     menuNav.classList.remove('show');
     menuBranding.classList.remove('show');
     navItems.forEach(item => item.classList.remove('show'));
-
-    // Set the tab index of the nav items
-    /* navItems.forEach((item, idx) => {
-      // Change the first n FA icons' tab indexes to be at the end
-      iconList[idx].tabIndex = 1 + lastTabIndex + idx;
-      // eslint-disable-next-line no-param-reassign
-      item.tabIndex = 1 + menuBtn.tabIndex + idx;
-    }); */
   }
   state.showMenu = !state.showMenu;
 };
