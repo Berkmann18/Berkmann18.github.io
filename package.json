@@ -4,7 +4,7 @@
   "private": true,
   "description": "My portofolio website",
   "main": "index.html",
-  "homepage": "https://berkmann18.github.io/MyPortfolio",
+  "homepage": "https://berkmann18.github.io/",
   "scripts": {
     "test": "eslint -c ./.eslintrc.json dist/js/*.js --fix",
     "mincss": "node-sass -w scss/ -o dist/css/ --recursive --output-style compressed",
