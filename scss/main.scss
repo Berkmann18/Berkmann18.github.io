@@ -73,7 +73,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 1.2rem; // 30/16px
-  grid-template-areas: 'bioimg bio bio' 'jobheading jobheading jobheading' 'job0 job1 job2' 'job3 job4 job5' 'etc etc etc' 'skillheading skillheading skillheading' 'skillcoding skilldesign skillops' 'eduheading eduheading eduheading' 'timeline timeline timeline' 'awardheading awardheading awardheading' 'award0 award1 award2' 'award3 . .';
+  grid-template-areas: 'bioimg bio bio' 'jobheading jobheading jobheading' 'job0 job1 job2' 'job3 job4 job5' 'etc etc etc' 'skillheading skillheading skillheading' 'skillcoding skilldesign skillops' 'eduheading eduheading eduheading' 'timeline timeline timeline' 'awardheading awardheading awardheading' 'award0 award1 award2' 'award3 award4 award5';
   grid-template-columns: repeat(3, 1fr);
 }
 
