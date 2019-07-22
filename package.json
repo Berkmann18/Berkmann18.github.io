@@ -27,7 +27,7 @@
     "axe-core": "^3.3.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-import": "^2.18.2",
     "gh-pages": "^2.0.1",
     "http-server": "^0.11.1",
     "node-sass": "^4.12.0"
