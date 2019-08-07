@@ -220,6 +220,11 @@ $dist-exp: 90%; //31.4rem;
   width: 86%;
 }
 
+.ts {
+  background-color: #294E80;
+  width: $dist-elem;
+}
+
 .nodejs {
   background-color: #83cd29;
   width: $dist-adv * .9;
@@ -237,12 +242,12 @@ $dist-exp: 90%; //31.4rem;
 
 .vuejs {
   background-color: #41b883;
-  width: $dist-beg * 1.09;
+  width: $dist-elem * 1.2;
 }
 
 .react {
   background-color: #00d8ff;
-  width: $dist-beg / 2;
+  width: $dist-elem * .8;
 }
 
 .pug {
@@ -277,7 +282,7 @@ $dist-exp: 90%; //31.4rem;
 
 .c {
   background-color: #a8b9cc;
-  width: $dist-inter * .9;
+  width: $dist-inter * .75;
 }
 
 .csharp {
@@ -363,6 +368,21 @@ $dist-exp: 90%; //31.4rem;
 .heroku {
   background-color: #7d57c1;
   width: $dist-inter;
+}
+
+.netlify {
+  background-color: #00AD9F;
+  width: $dist-inter * .75;
+}
+
+.travisci {
+  background-color: #E8E298;
+  width: $dist-adv * 1.05;
+}
+
+.circleci {
+  background-color: #00AD9F;
+  width: $dist-elem;
 }
 
 .linux {
