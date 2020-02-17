@@ -33,6 +33,6 @@
     "node-sass": "^4.13.1"
   },
   "dependencies": {
-    "accessibility": "^2.0.0"
+    "accessibility": "^3.0.3"
   }
 }
