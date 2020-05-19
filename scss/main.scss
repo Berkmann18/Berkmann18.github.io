@@ -73,7 +73,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 1.2rem; // 30/16px
-  grid-template-areas: 'bioimg bio bio' 'jobheading jobheading jobheading' 'job0 job1 job2' 'job3 job4 job5' 'etc etc etc' 'skillheading skillheading skillheading' 'skillcoding skilldesign skillops' 'eduheading eduheading eduheading' 'timeline timeline timeline' 'awardheading awardheading awardheading' 'award0 award1 award2' 'award3 award4 award5';
+  grid-template-areas: 'bioimg bio bio' 'jobheading jobheading jobheading' 'job5 job4 job3' 'job2 job1 job0' 'etc etc etc' 'skillheading skillheading skillheading' 'skillcoding skilldesign skillops' 'eduheading eduheading eduheading' 'timeline timeline timeline' 'awardheading awardheading awardheading' 'award0 award1 award2' 'award3 award4 award5';
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -127,12 +127,13 @@ main {
   grid-area: skillops;
 }
 
-$job-imgs: '../img/work/bwc.gif',
-'../img/work/rhul.png',
-'../img/work/progonline.png',
+$job-imgs: '../img/work/currys.png',
 '../img/work/rhul.png',
 '../img/work/rh100-teal.png',
-'../img/work/currys.png';
+'../img/work/progonline.png',
+'../img/work/rhul.png',
+'../img/work/bwc.gif',
+'../img/work/isg.png';
 $box-colour: lighten($primary-colour, 5);
 .job {
   background: $box-colour;
@@ -140,7 +141,7 @@ $box-colour: lighten($primary-colour, 5);
   padding: .5rem;
 }
 
-@for $i from 0 through 5 {
+@for $i from 6 through 0 {
   .job-#{$i} {
     &:hover {
       background: $box-colour url(nth($job-imgs, $i + 1)) no-repeat right top / 25%;
@@ -197,12 +198,12 @@ $dist-adv: 72%; //25.5rem;
 $dist-exp: 90%; //31.4rem;
 .html5 {
   background-color: #f16528;
-  width: 84%;
+  width: 86%;
 }
 
 .css3 {
   background-color: #339cd5;
-  width: 62%;
+  width: 62.5%;
 }
 
 .scss {
@@ -217,7 +218,7 @@ $dist-exp: 90%; //31.4rem;
 
 .js {
   background-color: #fbde34;
-  width: 86%;
+  width: 87%;
 }
 
 .ts {
@@ -227,7 +228,7 @@ $dist-exp: 90%; //31.4rem;
 
 .nodejs {
   background-color: #83cd29;
-  width: $dist-adv * .9;
+  width: $dist-adv * 1.001;
 }
 
 .express {
@@ -242,7 +243,7 @@ $dist-exp: 90%; //31.4rem;
 
 .vuejs {
   background-color: #41b883;
-  width: $dist-elem * 1.2;
+  width: $dist-elem * 1.5;
 }
 
 .react {
@@ -257,7 +258,7 @@ $dist-exp: 90%; //31.4rem;
 
 .python {
   background-color: #37709f;
-  width: 57%;
+  width: 58.5%;
 }
 
 .java {
@@ -267,7 +268,7 @@ $dist-exp: 90%; //31.4rem;
 
 .php {
   background-color: #8993be;
-  width: $dist-elem * .8;
+  width: $dist-beg;
 }
 
 .sql {
@@ -282,17 +283,17 @@ $dist-exp: 90%; //31.4rem;
 
 .c {
   background-color: #a8b9cc;
-  width: $dist-inter * .75;
+  width: $dist-elem;
 }
 
 .csharp {
   background-color: #39008d;
-  width: $dist-beg;
+  width: $dist-beg * .5;
 }
 
 .unity {
   background-color: #000;
-  width: $dist-beg * .9;
+  width: $dist-beg * .45;
 }
 
 .bash {
@@ -332,7 +333,7 @@ $dist-exp: 90%; //31.4rem;
 
 .gimp {
   background-color: #706853; //#585141 
-  width: $dist-elem * 1.45;
+  width: $dist-elem * 1.47;
 }
 
 .pfsx {
@@ -372,7 +373,7 @@ $dist-exp: 90%; //31.4rem;
 
 .netlify {
   background-color: #00AD9F;
-  width: $dist-inter * .75;
+  width: $dist-inter * .8;
 }
 
 .travisci {
@@ -387,7 +388,7 @@ $dist-exp: 90%; //31.4rem;
 
 .linux {
   background-color: #fed21f;
-  width: $dist-adv * 1.05;
+  width: $dist-adv * 1.2;
 }
 
 .windows {
