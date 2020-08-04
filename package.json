@@ -24,7 +24,7 @@
   "author": "Maximilian Berkmann <maxieberkmann@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "axe-core": "^3.5.5",
+    "axe-core": "^4.0.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
