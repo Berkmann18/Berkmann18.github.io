@@ -30,7 +30,7 @@
     "eslint-plugin-import": "^2.22.1",
     "gh-pages": "^3.1.0",
     "http-server": "^0.12.3",
-    "node-sass": "^5.0.0"
+    "node-sass": "^6.0.0"
   },
   "dependencies": {
     "accessibility": "^3.0.13"
